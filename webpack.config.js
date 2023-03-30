@@ -1,38 +1,36 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import { resolve } from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-  entry: {
-    index: './src/index.js',
-  },
-  mode: 'none',
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
+export const entry = {
+  index: './src/index.js',
+};
+export const mode = 'none';
+export const devtool = 'inline-source-map';
+export const devServer = {
+  static: './dist',
+};
+export const plugins = [
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+  }),
+];
+export const output = {
+  filename: '[name].bundle.js',
+  path: resolve(__dirname, 'dist'),
+  clean: true,
+};
+export const optimization = {
+  runtimeChunk: 'single',
+};
+export const module = {
+  rules: [
+    {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: 'asset/resource',
+    },
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  optimization: {
-    runtimeChunk: 'single',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
 };
