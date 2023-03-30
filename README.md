@@ -20,9 +20,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books <a name="about-project"></a>
+# 📖 To-Do List <a name="about-project"></a>
 
-**Awesome Books** is a project for Microverse bootcamp to learn about adding data into the local storage and then fetching them to display using JavaScript.
+**To-Do List** is a project for Microverse bootcamp to learn about webpack, generate todo list dynamically and then display using JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -58,12 +58,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Basic UI**
-- **Form Submission to add books**
-- **Storing into the local storage**
-- **[Desktop Version]**
-- **[Dynamic Design]**
-- **[SPA design]**
+- **[Webpack functionality]**
+- **[Javascript Funcionality]**
+- **[Javascript ES6]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +79,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 cd my-folder
-git clone https://github.com/Metaverse-Nabeel/Awesome_Books.git
+git clone https://github.com/Metaverse-Nabeel/ToDo-List.git
 
 ### Install
 
@@ -110,23 +107,14 @@ To run the project, Open index.html in browser.
 - Twitter: [@Nabeel129](https://twitter.com/Nabeel129)
 - LinkedIn: [@Nabeel129](https://linkedin.com/in/Nabeel129)
 
-👤 **Author 2 - Ali**
-- GitHub: [@githubhandle](https://github.com/devalibello)
-- Twitter: [@twitterhandle](https://twitter.com/i_am_aalee)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ali-bello-imoukhuede/)
-
-👤 **Author 3 - Edy**
-- GitHub: [@githubhandle](https://github.com/EddxSotz)
-- Twitter: [@twitterhandle](https://twitter.com/)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Maybe making UI more stylish for users**
+- **Adding features like adding, removing and completing tasks**
+- **Making UI more stylish for users**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

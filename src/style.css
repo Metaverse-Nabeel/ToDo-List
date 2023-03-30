@@ -1,3 +1,102 @@
-.hello {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f2f5;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+.titleApp {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2.5%;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 30%;
+  margin-left: 35%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+  border-bottom: 1.5px #ddd solid;
+}
+
+.taskForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: #ddd 1.5px solid;
+}
+
+.taskForm input {
+  width: 85%;
+  height: 30px;
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 2%;
+  outline: none;
+  border: none;
+}
+
+.tasksContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px #ddd solid;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+}
+
+.taskText {
+  display: flex;
+  width: 60%;
+}
+
+.taskText p {
+  margin-left: 3%;
+}
+
+.clearBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 50%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 0.5s ease-in-out;
+  background-color: rgb(58, 135, 211);
+  color: black;
 }
