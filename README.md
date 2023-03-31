@@ -61,6 +61,7 @@
 - **[Webpack functionality]**
 - **[Javascript Funcionality]**
 - **[Javascript ES6]**
+- **[Implemented CRUD Methods]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
