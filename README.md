@@ -6,11 +6,14 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -63,6 +66,15 @@
 - **[Javascript ES6]**
 - **[Implemented CRUD Methods]**
 - **[Implemented Interactive List]**
+- **[Deployed using GitHub Pages]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- Live Demo: [ToDo List Project](https://metaverse-nabeel.github.io/ToDo-List/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,9 +109,17 @@ Install this project with:
 
 To run the project, Open index.html in browser.
 
+### Run tests
+
+To run tests, run the following command:
+
+
+### Deployment
+
+- Deployed at GitHub Pages: [ToDo List Project](https://metaverse-nabeel.github.io/ToDo-List/dist/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -115,8 +135,7 @@ To run the project, Open index.html in browser.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Adding features like adding, removing and completing tasks**
-- **Making UI more stylish for users**
+- **Making UI more interactive**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
