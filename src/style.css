@@ -6,7 +6,12 @@
 
 body {
   background-color: #f1f2f5;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-family:
+    "Lucida Sans",
+    "Lucida Sans Regular",
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    sans-serif;
 }
 
 i {
@@ -76,6 +81,25 @@ i {
 
 .taskText p {
   margin-left: 3%;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  outline: none;
+  border: none;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.taskEdit {
+  outline: none;
+  border: none;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .clearBtnDiv {
