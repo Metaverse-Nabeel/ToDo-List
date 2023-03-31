@@ -76,7 +76,8 @@ i {
 
 .taskText {
   display: flex;
-  width: 60%;
+  justify-content: center;
+  align-items: center;
 }
 
 .taskText p {
@@ -85,12 +86,6 @@ i {
 
 .taskDone {
   text-decoration: line-through;
-  outline: none;
-  border: none;
-  margin-left: 2%;
-  margin-top: 2%;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 .taskEdit {
