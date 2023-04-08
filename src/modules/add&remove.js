@@ -1,10 +1,9 @@
 // eslint-disable-next-line import/no-mutable-exports
-let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo')) || [];
-
-const taskList = document.getElementById('tasksList');
 
 /* Rendering Task List */
 const renderList = () => {
+  const tasksToDo = JSON.parse(localStorage.getItem('tasksToDo')) || [];
+  const taskList = document.getElementById('tasksList');
   taskList.innerHTML = '';
   tasksToDo.forEach((task) => {
     const taskCard = document.createElement('div');
@@ -25,6 +24,7 @@ const renderList = () => {
 /* Add To List */
 const newTask = document.getElementById('taskInput');
 const addToList = (e) => {
+  let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   if (newTask.value === '') return;
   if (e.key === 'Enter' || e === 'clicked') {
     const taskItem = {
@@ -40,7 +40,8 @@ const addToList = (e) => {
 };
 
 /* Edit Task */
-const editTask = (index, event) => {
+const editTask = ({ index, event }) => {
+  const tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   if (event.target.value === '') return;
   if (event.key === 'Enter') {
     tasksToDo[index - 1].description = event.target.value;
@@ -50,6 +51,7 @@ const editTask = (index, event) => {
 
 /* Remove Task */
 const removeTask = (targetIndex) => {
+  let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   const listFiltered = tasksToDo.filter((item) => +item.index !== +targetIndex);
   const newList = listFiltered.map((item, index) => ({
     description: item.description,
@@ -61,12 +63,12 @@ const removeTask = (targetIndex) => {
   renderList();
 };
 
-/* Update Uncompleted Tasks */
-const updateUncompleted = (data) => {
-  tasksToDo = data;
-  renderList();
-};
+// /* Update Uncompleted Tasks */
+// const updateUncompleted = (data) => {
+//   tasksToDo = data;
+//   renderList();
+// };
 
 export {
-  renderList, addToList, editTask, removeTask, tasksToDo, updateUncompleted,
+  renderList, addToList, editTask, removeTask,
 };
