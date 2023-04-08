@@ -3,8 +3,7 @@
  */
 
 import { editTask } from '../src/modules/add&remove.js';
-import { checkedBox } from '../src/modules/statusUpdate.js';
-
+import { checkedBox, removeCompletedTasks } from '../src/modules/statusUpdate.js';
 jest.mock('../__mock__/taskTest');
 
 const mockTask = [
@@ -67,5 +66,30 @@ describe('Completed Task', () => {
     expect(newTaskList[statusUpdate.index - 1].completed).toBeTruthy();
   });
 
-  // Paste your here... and don't forget to import removeCompletedTasks
+  test('Remove Completed', () => {
+    document.body.innerHTML = '<div id="tasksList"></div>';
+    const data = [
+      {
+        index: 1,
+        description: 'test1',
+        completed: true,
+      },
+      {
+        index: 2,
+        description: 'test2',
+        completed: true,
+      },
+      {
+        index: 3,
+        description: 'test3',
+        completed: false,
+      },
+    ];
+    localStorage.setItem('tasksToDo', JSON.stringify(data));
+    /* Act */
+    removeCompletedTasks();
+    const newTaskList = JSON.parse(localStorage.getItem('tasksToDo'));
+    /* Assert */
+    expect(newTaskList.length).toBeLessThan(data.length);
+  });
 });
