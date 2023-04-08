@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-mutable-exports
-let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo')) || [];
+let tasksToDo = JSON.parse(localStorage.getItem('list')) || [];
 
 const taskList = document.getElementById('tasksList');
 
@@ -34,17 +34,18 @@ const addToList = (e) => {
     };
     newTask.value = '';
     tasksToDo = [...tasksToDo, taskItem];
-    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
+    localStorage.setItem('list', JSON.stringify(tasksToDo));
     renderList();
   }
 };
 
 /* Edit Task */
-const editTask = (index, event) => {
+const editTask = ({ index, event }) => {
+  tasksToDo = JSON.parse(localStorage.getItem('list'));
   if (event.target.value === '') return;
   if (event.key === 'Enter') {
     tasksToDo[index - 1].description = event.target.value;
-    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
+    localStorage.setItem('list', JSON.stringify(tasksToDo));
   }
 };
 
@@ -57,7 +58,7 @@ const removeTask = (targetIndex) => {
     index: index + 1,
   }));
   tasksToDo = newList;
-  localStorage.setItem('tasksToDo', JSON.stringify(newList));
+  localStorage.setItem('list', JSON.stringify(newList));
   renderList();
 };
 
