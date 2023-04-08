@@ -1,5 +1,3 @@
-// eslint-disable-next-line import/no-mutable-exports
-
 /* Rendering Task List */
 const renderList = () => {
   const tasksToDo = JSON.parse(localStorage.getItem('tasksToDo')) || [];
