@@ -1,10 +1,7 @@
-// eslint-disable-next-line import/no-mutable-exports
-let tasksToDo = JSON.parse(localStorage.getItem('list')) || [];
-
-const taskList = document.getElementById('tasksList');
-
 /* Rendering Task List */
 const renderList = () => {
+  const tasksToDo = JSON.parse(localStorage.getItem('tasksToDo')) || [];
+  const taskList = document.getElementById('tasksList');
   taskList.innerHTML = '';
   tasksToDo.forEach((task) => {
     const taskCard = document.createElement('div');
@@ -25,6 +22,7 @@ const renderList = () => {
 /* Add To List */
 const newTask = document.getElementById('taskInput');
 const addToList = (e) => {
+  let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   if (newTask.value === '') return;
   if (e.key === 'Enter' || e === 'clicked') {
     const taskItem = {
@@ -34,23 +32,24 @@ const addToList = (e) => {
     };
     newTask.value = '';
     tasksToDo = [...tasksToDo, taskItem];
-    localStorage.setItem('list', JSON.stringify(tasksToDo));
+    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
     renderList();
   }
 };
 
 /* Edit Task */
 const editTask = ({ index, event }) => {
-  tasksToDo = JSON.parse(localStorage.getItem('list'));
+  const tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   if (event.target.value === '') return;
   if (event.key === 'Enter') {
     tasksToDo[index - 1].description = event.target.value;
-    localStorage.setItem('list', JSON.stringify(tasksToDo));
+    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
   }
 };
 
 /* Remove Task */
 const removeTask = (targetIndex) => {
+  let tasksToDo = JSON.parse(localStorage.getItem('tasksToDo'));
   const listFiltered = tasksToDo.filter((item) => +item.index !== +targetIndex);
   const newList = listFiltered.map((item, index) => ({
     description: item.description,
@@ -58,16 +57,16 @@ const removeTask = (targetIndex) => {
     index: index + 1,
   }));
   tasksToDo = newList;
-  localStorage.setItem('list', JSON.stringify(newList));
+  localStorage.setItem('tasksToDo', JSON.stringify(newList));
   renderList();
 };
 
-/* Update Uncompleted Tasks */
-const updateUncompleted = (data) => {
-  tasksToDo = data;
-  renderList();
-};
+// /* Update Uncompleted Tasks */
+// const updateUncompleted = (data) => {
+//   tasksToDo = data;
+//   renderList();
+// };
 
 export {
-  renderList, addToList, editTask, removeTask, tasksToDo, updateUncompleted,
+  renderList, addToList, editTask, removeTask,
 };
