@@ -3,7 +3,9 @@
  */
 
 import { editTask } from '../src/modules/add&remove.js';
+
 import { checkedBox, removeCompletedTasks } from '../src/modules/statusUpdate.js';
+
 jest.mock('../__mock__/taskTest');
 
 const mockTask = [
@@ -49,7 +51,7 @@ describe('Edit Task Description', () => {
 });
 
 describe('Completed Task', () => {
-  test('Status update', () => {
+  test('Checkbox Status update', () => {
     /* Arrange */
     const statusUpdate = {
       index: 1,
