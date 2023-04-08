@@ -32,7 +32,7 @@ const addToList = (e) => {
     };
     newTask.value = '';
     tasksToDo = [...tasksToDo, taskItem];
-    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
+    localStorage.setItem('list', JSON.stringify(tasksToDo));
     renderList();
   }
 };
@@ -43,7 +43,7 @@ const editTask = ({ index, event }) => {
   if (event.target.value === '') return;
   if (event.key === 'Enter') {
     tasksToDo[index - 1].description = event.target.value;
-    localStorage.setItem('tasksToDo', JSON.stringify(tasksToDo));
+    localStorage.setItem('list', JSON.stringify(tasksToDo));
   }
 };
 
@@ -57,7 +57,7 @@ const removeTask = (targetIndex) => {
     index: index + 1,
   }));
   tasksToDo = newList;
-  localStorage.setItem('tasksToDo', JSON.stringify(newList));
+  localStorage.setItem('list', JSON.stringify(newList));
   renderList();
 };
 
